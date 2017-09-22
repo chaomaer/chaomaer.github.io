@@ -338,7 +338,7 @@
 <ul>
 <li><p>当我们想要对id从小到大排序时，我们比较的是前一个，也就是前面的都是有序的，当此时的id&gt;O.id的时候，也就没有必要进行比较，直接return 0 即可。</p>
 </li>
-<li><p>当我们想对year从大到小排序时，当year<o.year的时候，才是满足题意的，也就是此时才return 1，而当year="">O.year的时候，应该return -1，也就是需要调增位置。</o.year的时候，才是满足题意的，也就是此时才return></p>
+<li><p>当我们想对year从大到小排序时，当year小于O.year的时候，才是满足题意的，也就是此时才return 1，而当year&gt;O.year的时候，应该return -1，也就是需要调增位置。</p>
 </li>
 </ul>
 

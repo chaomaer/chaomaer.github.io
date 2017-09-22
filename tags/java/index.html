@@ -98,7 +98,7 @@
 <meta name="description" content="to be a new learner">
 <meta property="og:type" content="website">
 <meta property="og:title" content="雨中漫步">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/java/index.html">
 <meta property="og:site_name" content="雨中漫步">
 <meta property="og:description" content="to be a new learner">
 <meta property="og:locale" content="zh-Hans">
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/java/"/>
 
 
 
 
 
-  <title>雨中漫步</title>
+  <title>标签: java | 雨中漫步</title>
   
 
 
@@ -159,8 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,259 +242,53 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
+
+  
+  
+  
+  <div class="post-block tag">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>java<small>标签</small>
+        </h1>
+      </div>
+
       
-
-  
-
-  
-  
-  
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/22/java-object-sort/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="chaomaer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雨中漫步">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/22/java-object-sort/" itemprop="url">java-object-sort</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2017/09/22/java-object-sort/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">java-object-sort</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-22T16:09:16-05:00">
-                2017-09-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
+            </a>
         
-          
-            <p>在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int compareTo(Object O)</div><div class="line">	O − the Object to be compared.</div></pre></td></tr></table></figure>
-<p>从上面函数的意思可以看出，O的含义是被比较的对象。<br>假设我们现在要比较的类是:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">class Node</div><div class="line">&#123;</div><div class="line">    public int id;</div><div class="line">       public int year;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>假设我们现在要实现的是对id从小到大排序，如果id相同，则年龄大的优先。<br>那么代码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">class Node implements Comparable&lt;Node&gt;&#123;</div><div class="line">        public int id;</div><div class="line">        public int year;</div><div class="line"></div><div class="line">        public Node(int id, int year) &#123;</div><div class="line">            this.id = id;</div><div class="line">            this.year = year;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public String toString() &#123;</div><div class="line">            return &quot;Node&#123;&quot; +</div><div class="line">                    &quot;id=&quot; + id +</div><div class="line">                    &quot;, year=&quot; + year +</div><div class="line">                    &apos;&#125;&apos;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public int compareTo(Node o) &#123;</div><div class="line">            if (id &gt; o.id) return 1;</div><div class="line">            else if (id == o.id)&#123;</div><div class="line">                if (year &gt; o.year)</div><div class="line">                    return 1;</div><div class="line">                else</div><div class="line">                    return -1;</div><div class="line">            &#125;</div><div class="line">            else return -1;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>我来试着解释一下为啥么要这么写，大于小于和1，-1的关系是什么</p>
-<ul>
-<li><p>当我们想要对id从小到大排序时，我们比较的是前一个，也就是前面的都是有序的，当此时的id&gt;O.id的时候，也就没有必要进行比较，直接return 0 即可。</p>
-</li>
-<li><p>当我们想对year从大到小排序时，当year\<o.year的时候，才是满足题意的，也就是此时才return 1，而当year="">O.year的时候，应该return -1，也就是需要调增位置。</o.year的时候，才是满足题意的，也就是此时才return></p>
-</li>
-</ul>
+      </h2>
 
-          
-        
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-09-22T16:09:16-05:00"
+              content="2017-09-22" >
+          09-22
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="chaomaer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雨中漫步">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/30/hello-world/" itemprop="url">hello-world</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T11:42:34-05:00">
-                2017-08-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
 

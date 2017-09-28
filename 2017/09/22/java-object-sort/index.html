@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。 12int compareTo(Object O)	O − the Object to be compared. 从上面函数的意思可以看出，O的含义是被比较的对象。假设我们现在要比较的类是:12345class Node&amp;#123;       public int id;">
+<meta name="description" content="在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。12int compareTo(Object O)	O − the Object to be compared. 从上面函数的意思可以看出，O的含义是被比较的对象。假设我们现在要比较的类是:12345class NodeMM&amp;#123;       public int id;">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java-object-sort">
 <meta property="og:url" content="http://yoursite.com/2017/09/22/java-object-sort/index.html">
 <meta property="og:site_name" content="雨中漫步">
-<meta property="og:description" content="在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。 12int compareTo(Object O)	O − the Object to be compared. 从上面函数的意思可以看出，O的含义是被比较的对象。假设我们现在要比较的类是:12345class Node&amp;#123;       public int id;">
+<meta property="og:description" content="在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。12int compareTo(Object O)	O − the Object to be compared. 从上面函数的意思可以看出，O的含义是被比较的对象。假设我们现在要比较的类是:12345class NodeMM&amp;#123;       public int id;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-22T23:43:51.110Z">
+<meta property="og:updated_time" content="2017-09-27T22:21:15.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java-object-sort">
-<meta name="twitter:description" content="在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。 12int compareTo(Object O)	O − the Object to be compared. 从上面函数的意思可以看出，O的含义是被比较的对象。假设我们现在要比较的类是:12345class Node&amp;#123;       public int id;">
+<meta name="twitter:description" content="在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。12int compareTo(Object O)	O − the Object to be compared. 从上面函数的意思可以看出，O的含义是被比较的对象。假设我们现在要比较的类是:12345class NodeMM&amp;#123;       public int id;">
 
 
 
@@ -142,7 +142,7 @@
 
 
 
-  <title>java-object-sort | 雨中漫步</title>
+  <title>java-object-sort | 雨中漫步</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -161,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -326,11 +326,10 @@
       
 
       
-        <p>在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int compareTo(Object O)</div><div class="line">	O − the Object to be compared.</div></pre></td></tr></table></figure>
-<p>从上面函数的意思可以看出，O的含义是被比较的对象。<br>假设我们现在要比较的类是:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">class Node</div><div class="line">&#123;</div><div class="line">       public int id;</div><div class="line">       public int year;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p>在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Object O)</span></span></div><div class="line"><span class="function">	O − the Object to be compared.</span></div></pre></td></tr></table></figure></p>
+<p>从上面函数的意思可以看出，O的含义是被比较的对象。<br>假设我们现在要比较的类是:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">NodeMM</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">       <span class="keyword">public</span> <span class="keyword">int</span> id;</div><div class="line">       <span class="keyword">public</span> <span class="keyword">int</span> year;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>假设我们现在要实现的是对id从小到大排序，如果id相同，则年龄大的优先。<br>那么代码为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">class Node implements Comparable&lt;Node&gt;&#123;</div><div class="line">        public int id;</div><div class="line">        public int year;</div><div class="line"></div><div class="line">        public Node(int id, int year) &#123;</div><div class="line">            this.id = id;</div><div class="line">            this.year = year;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public String toString() &#123;</div><div class="line">            return &quot;Node&#123;&quot; +</div><div class="line">                    &quot;id=&quot; + id +</div><div class="line">                    &quot;, year=&quot; + year +</div><div class="line">                    &apos;&#125;&apos;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public int compareTo(Node o) &#123;</div><div class="line">            if (id &gt; o.id) return 1;</div><div class="line">            else if (id == o.id)&#123;</div><div class="line">                if (year &gt; o.year)</div><div class="line">                    return 1;</div><div class="line">                else</div><div class="line">                    return -1;</div><div class="line">            &#125;</div><div class="line">            else return -1;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Node</span>&gt;</span>&#123;</div><div class="line">        <span class="keyword">public</span> <span class="keyword">int</span> id;</div><div class="line">        <span class="keyword">public</span> <span class="keyword">int</span> year;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> id, <span class="keyword">int</span> year)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.id = id;</div><div class="line">            <span class="keyword">this</span>.year = year;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="string">"Node&#123;"</span> +</div><div class="line">                    <span class="string">"id="</span> + id +</div><div class="line">                    <span class="string">", year="</span> + year +</div><div class="line">                    <span class="string">'&#125;'</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Node o)</span> </span>&#123;</div><div class="line">            <span class="keyword">if</span> (id &gt; o.id) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (id == o.id)&#123;</div><div class="line">                <span class="keyword">if</span> (year &gt; o.year)</div><div class="line">                    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">                <span class="keyword">else</span></div><div class="line">                    <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>我来试着解释一下为啥么要这么写，大于小于和1，-1的关系是什么</p>
 <ul>
 <li><p>当我们想要对id从小到大排序时，我们比较的是前一个，也就是前面的都是有序的，当此时的id&gt;O.id的时候，也就没有必要进行比较，直接return 0 即可。</p>
@@ -377,6 +376,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/27/sql-server-command/" rel="prev" title="sql-server-command">
+                sql-server-command <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -446,7 +449,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -619,7 +622,24 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 

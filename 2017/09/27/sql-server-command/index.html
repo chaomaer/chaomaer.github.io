@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="to be a new learner">
+<meta name="description" content="谈一谈join的用法(运行环境sql-Server)    输入对象两张表和约束条件输入对象满足条件的表    inner join = join    可以把table1作为参考，去table2中查找满足条件的元祖，合并成一条元祖；也可以把table2作为参考，去table1中找满足条件的元祖，然后进行拼接，也就是table1和table2的地位是一样的。如果在另一张表中没有满足条件的，则本元">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello-world">
-<meta property="og:url" content="http://yoursite.com/2017/08/30/hello-world/index.html">
+<meta property="og:title" content="sql-server-command">
+<meta property="og:url" content="http://yoursite.com/2017/09/27/sql-server-command/index.html">
 <meta property="og:site_name" content="雨中漫步">
-<meta property="og:description" content="to be a new learner">
+<meta property="og:description" content="谈一谈join的用法(运行环境sql-Server)    输入对象两张表和约束条件输入对象满足条件的表    inner join = join    可以把table1作为参考，去table2中查找满足条件的元祖，合并成一条元祖；也可以把table2作为参考，去table1中找满足条件的元祖，然后进行拼接，也就是table1和table2的地位是一样的。如果在另一张表中没有满足条件的，则本元">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-28T03:21:35.367Z">
+<meta property="og:updated_time" content="2017-09-28T03:19:59.951Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello-world">
-<meta name="twitter:description" content="to be a new learner">
+<meta name="twitter:title" content="sql-server-command">
+<meta name="twitter:description" content="谈一谈join的用法(运行环境sql-Server)    输入对象两张表和约束条件输入对象满足条件的表    inner join = join    可以把table1作为参考，去table2中查找满足条件的元祖，合并成一条元祖；也可以把table2作为参考，去table1中找满足条件的元祖，然后进行拼接，也就是table1和table2的地位是一样的。如果在另一张表中没有满足条件的，则本元">
 
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/30/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/27/sql-server-command/"/>
 
 
 
 
 
-  <title>hello-world | 雨中漫步</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>sql-server-command | 雨中漫步</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/30/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/27/sql-server-command/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chaomaer">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hello-world</h1>
+          <h1 class="post-title" itemprop="name headline">sql-server-command</h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T11:42:34-05:00">
-                2017-08-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-27T21:23:41-05:00">
+                2017-09-27
               </time>
             
 
@@ -325,7 +325,32 @@
       
 
       
-        
+        <blockquote>
+<p>谈一谈join的用法(运行环境sql-Server)  </p>
+</blockquote>
+<p>输入对象两张表和约束条件<br>输入对象满足条件的表  </p>
+<ul>
+<li>inner join = join  </li>
+</ul>
+<p>可以把table1作为参考，去table2中查找满足条件的元祖，合并成一条元祖；也可以把table2作为参考，去<br>table1中找满足条件的元祖，然后进行拼接，也就是table1和table2的地位是一样的。如果在另一张表中没有满足条件的，则本元祖作废。<br>语法：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table1 <span class="keyword">join</span> table2 <span class="keyword">on</span> condition</div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table1 <span class="keyword">inner</span> <span class="keyword">join</span> table2 <span class="keyword">on</span> conditon</div></pre></td></tr></table></figure></p>
+<ul>
+<li>left join  </li>
+</ul>
+<p>把table1作为参考，到table2中寻找满足条件的，找到的话拼接，找不到则把未找到的置为NULL，table1和table2的地位不同。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table1 <span class="keyword">left</span> <span class="keyword">join</span> table2 <span class="keyword">on</span> condition</div></pre></td></tr></table></figure></p>
+<ul>
+<li>right join</li>
+</ul>
+<p>把table2作为参考，到table1中寻找满足条件的，找到的话拼接，找不到则把未找到的置为NULL，table1和table2的地位不同。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table1 <span class="keyword">right</span> <span class="keyword">join</span> table2 <span class="keyword">on</span> condition</div></pre></td></tr></table></figure></p>
+<ul>
+<li>full join</li>
+</ul>
+<p>left join左边的全部保留，right join右边的全部保留，full join全部保留，不能进行拼接的元祖用NULL进行拼接。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> table1 <span class="keyword">full</span> <span class="keyword">join</span> table2 <span class="keyword">on</span> condition</div></pre></td></tr></table></figure></p>
+<hr>
+<blockquote>
+<p>各种join的用法就是我们怎样对待不能拼接的元祖，和如何看待table的地位。</p>
+</blockquote>
+
       
     </div>
     
@@ -349,15 +374,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/22/java-object-sort/" rel="next" title="java-object-sort">
+                <i class="fa fa-chevron-left"></i> java-object-sort
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/22/java-object-sort/" rel="prev" title="java-object-sort">
-                java-object-sort <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

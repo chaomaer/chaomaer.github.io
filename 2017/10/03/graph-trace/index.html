@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="graph," />
 
 
 
@@ -95,16 +95,20 @@
 
 
 
-<meta name="description" content="to be a new learner">
-<meta property="og:type" content="website">
-<meta property="og:title" content="雨中漫步">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="用dfs来记录从起始点到终点的路径。    当没有环的时候，我们不需要记录哪个顶点没有被访问过，这样也不会导致死循环。 而当有环的时候，则必须记录哪个顶点有被访问过，在本次寻找的过程中不能再访问他，防止死循环。">
+<meta name="keywords" content="graph">
+<meta property="og:type" content="article">
+<meta property="og:title" content="graph-trace">
+<meta property="og:url" content="http://yoursite.com/2017/10/03/graph-trace/index.html">
 <meta property="og:site_name" content="雨中漫步">
-<meta property="og:description" content="to be a new learner">
+<meta property="og:description" content="用dfs来记录从起始点到终点的路径。    当没有环的时候，我们不需要记录哪个顶点没有被访问过，这样也不会导致死循环。 而当有环的时候，则必须记录哪个顶点有被访问过，在本次寻找的过程中不能再访问他，防止死循环。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/graph.png">
+<meta property="og:updated_time" content="2017-10-03T15:15:52.878Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="雨中漫步">
-<meta name="twitter:description" content="to be a new learner">
+<meta name="twitter:title" content="graph-trace">
+<meta name="twitter:description" content="用dfs来记录从起始点到终点的路径。    当没有环的时候，我们不需要记录哪个顶点没有被访问过，这样也不会导致死循环。 而当有环的时候，则必须记录哪个顶点有被访问过，在本次寻找的过程中不能再访问他，防止死循环。">
+<meta name="twitter:image" content="http://yoursite.com/images/graph.png">
 
 
 
@@ -134,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/03/graph-trace/"/>
 
 
 
 
 
-  <title>雨中漫步</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>graph-trace | 雨中漫步</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -159,8 +163,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,9 +246,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -275,9 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/03/graph-trace/" itemprop="url">graph-trace</a></h1>
+          <h1 class="post-title" itemprop="name headline">graph-trace</h1>
         
 
         <div class="post-meta">
@@ -327,19 +328,15 @@
       
 
       
-        
-          <p>用dfs来记录从起始点到终点的路径。  </p>
+        <p>用dfs来记录从起始点到终点的路径。  </p>
 <ul>
 <li>当没有环的时候，我们不需要记录哪个顶点没有被访问过，这样也不会导致死循环。</li>
-<li>而当有环的时候，则必须记录哪个顶点有被访问过，在本次寻找的过程中不能再访问他，防止死循环。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/03/graph-trace/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<li>而当有环的时候，则必须记录哪个顶点有被访问过，在本次寻找的过程中不能再访问他，防止死循环。  <a id="more"></a>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; mstack;</div><div class="line"><span class="keyword">int</span> road[<span class="number">6</span>][<span class="number">6</span>];</div><div class="line"><span class="keyword">bool</span> visit[<span class="number">6</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> start)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span> (start == <span class="number">5</span>)&#123;</div><div class="line">        mstack.push_back(<span class="number">5</span>);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mstack.size(); ++i) &#123;</div><div class="line">            <span class="built_in">cout</span>&lt;&lt;mstack[i]&lt;&lt;<span class="string">" "</span>;</div><div class="line">        &#125;</div><div class="line">        mstack.pop_back();</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; ++i) &#123;</div><div class="line">        <span class="keyword">if</span> (road[start][i]&amp;&amp;!visit[i])&#123;</div><div class="line">            mstack.push_back(start);</div><div class="line">            visit[i] = <span class="literal">true</span>;</div><div class="line">            dfs(i);</div><div class="line">            visit[i] =<span class="literal">false</span>;</div><div class="line">            mstack.pop_back();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(road,<span class="number">0</span>,<span class="keyword">sizeof</span>(road));</div><div class="line">    <span class="built_in">memset</span>(visit,<span class="number">0</span>,<span class="keyword">sizeof</span>(visit));</div><div class="line">    road[<span class="number">1</span>][<span class="number">3</span>] = <span class="number">1</span>;</div><div class="line">    road[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">1</span>;</div><div class="line">    road[<span class="number">2</span>][<span class="number">4</span>] = <span class="number">1</span>;</div><div class="line">    road[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">1</span>;</div><div class="line">    road[<span class="number">3</span>][<span class="number">4</span>] = <span class="number">1</span>;</div><div class="line">    road[<span class="number">3</span>][<span class="number">5</span>] = <span class="number">1</span>;</div><div class="line">    road[<span class="number">4</span>][<span class="number">5</span>] = <span class="number">1</span>;</div><div class="line">    road[<span class="number">4</span>][<span class="number">3</span>] = <span class="number">1</span>;</div><div class="line">    visit[<span class="number">1</span>] = <span class="literal">true</span>;</div><div class="line">    dfs(<span class="number">1</span>);</div><div class="line">    visit[<span class="number">1</span>] = <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>代码用到的图<br><img src="/images/graph.png" alt=""></p>
+
       
     </div>
     
@@ -354,265 +351,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/27/sql-server-command/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="chaomaer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雨中漫步">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/27/sql-server-command/" itemprop="url">sql-server-command</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-27T21:23:41-05:00">
-                2017-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/graph/" rel="tag"># graph</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <blockquote>
-<p>谈一谈join的用法(运行环境sql-Server)  </p>
-</blockquote>
-<p>输入对象两张表和约束条件<br>输入对象满足条件的表<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/27/sql-server-command/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/27/sql-server-command/" rel="next" title="sql-server-command">
+                <i class="fa fa-chevron-left"></i> sql-server-command
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/22/java-object-sort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="chaomaer">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雨中漫步">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/22/java-object-sort/" itemprop="url">java-object-sort</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-22T16:09:16-05:00">
-                2017-09-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>在java中，想要实现对象的排序，可以让对象实现Comparable借口，一直困扰我的是compareTo函数的含义。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/22/java-object-sort/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -622,10 +390,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -633,6 +402,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -836,11 +609,32 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
@@ -886,43 +680,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src=""></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
   
 
 
